@@ -4,6 +4,7 @@
   function Game() {
     this.player = null;
     this.cursors = null;
+    this.enemy = null;
   }
 
   Game.prototype = {
@@ -29,6 +30,8 @@
       this.player.animations.play('walk-up');
 
       this.cursors = this.game.input.keyboard.createCursorKeys();
+
+      this.enemy = new Enemy(this, 0, 0);
 
     },
 
